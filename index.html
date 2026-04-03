@@ -9,6 +9,8 @@
 
 
         /* ################ROOT style############### */
+        * { margin: 0; padding: 0; box-sizing: border-box;}
+      body {margin: 0;padding: 0;font-family: "Segoe UI", sans-serif;}
 .main-title h1{ font-size: 32px !important;}
 .main-title h2{ font-size: 28px !important;}
 .main-title p{ font-size: 19px !important; line-height: 1.6;}
@@ -96,13 +98,6 @@ section{padding: 30px 0;}
 
 
    /* ################Section 3 and 4 start############### */
- body {
-            font-family: 'Inter', sans-serif;
-            background: #ffffff;
-            min-height: 100vh;  
-            margin: 0;
-        }
-
         /* ── Shared Section ── */
         .section-block {
             padding: 60px 40px;
@@ -328,23 +323,7 @@ section{padding: 30px 0;}
 
 
    /* ################Section 5 and 6  start############### */
- * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
-
-      body {
-        margin: 0;
-        padding: 0;
-        font-family: "Segoe UI", sans-serif;
-      }
-
-      .container {
-        max-width: 1200px;
-        margin: 0 auto;
-      }
-
+      .container {max-width: 1200px;margin: 0 auto;}
       /* ============================= */
       /* SECTION 5: PACKAGING PROCESS */
       /* ============================= */
@@ -538,15 +517,20 @@ section{padding: 30px 0;}
 
 /* USP Item Boxes */
 .usp-item {
-    background-color: rgba(255, 255, 255, 0.04); /* Subtle transparent white background */
-    border: 1px solid rgba(255, 255, 255, 0.08); /* Faint border */
-    transition: transform 0.2s ease, background-color 0.2s ease;
-    height: 100%; /* Ensures equal heights if text wraps */
+    background: rgba(255, 255, 255, 0.6); 
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px); 
+    border: 1px solid rgba(255, 255, 255, 0.4); 
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.25s ease;
+    height: 100%;
 }
 
 .usp-item:hover {
-    background-color: rgba(255, 255, 255, 0.08);
-    transform: translateY(-2px); /* Slight lift on hover */
+    background: rgba(255, 255, 255, 0.75);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
 }
 
 /* Icon Sizing & Color */
@@ -578,6 +562,463 @@ section{padding: 30px 0;}
     border-color: #558a3a !important;
     transform: scale(1.02);
 }
+   /* ################Section 7 END############### */
+
+
+
+
+   /* ################Section 8, 9, 10 start ############### */
+  /* ── Shared Section ── */
+        .section-block {
+            padding: 60px 40px;
+            border-bottom: 1px solid #e2ecf5;
+        }
+
+        .section-block:last-child {
+            border-bottom: none;
+        }
+
+        /* Slide number + title */
+        .slide-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .slide-num {
+            width: 32px;
+            height: 32px;
+            background: #1a365d;
+            color: #fff;
+            border-radius: 7px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .slide-title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #1a365d;
+            margin-left: 265px;
+        }
+
+        /* ── Section 1 ── */
+        .intro-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: #475569;
+            line-height: 1.72;
+            margin-bottom: 20px;
+        }
+
+
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bullet-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.875rem;
+            color: #2d3748;
+            padding: 10px 12px;
+            border-radius: 8px;
+            margin-bottom: 4px;
+            cursor: default;
+            transition: background 0.18s, transform 0.18s;
+        }
+
+        .bullet-list li:hover {
+            background: #f0faf4;
+            transform: translateX(5px);
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            background: #e6f4ec;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .check-icon svg {
+            width: 11px;
+            height: 11px;
+        }
+
+        .img-box {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;
+            min-height: 240px;
+            /* background: #ffffff; */
+        }
+
+        .img-box img {
+            width: 71%;
+            margin-left: 91px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+            border-radius: 18px;
+        }
+
+        .img-box:hover img {
+            transform: scale(1.03);
+        }
+
+        .closing-bar {
+            border-left: 3px solid #007336;
+            background: linear-gradient(135deg, #f0f9ff, #f0faf4);
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1a365d;
+            line-height: 1.6;
+        }
+
+        .tag-pill {
+            font-size: 0.72rem;
+            font-weight: 500;
+            background: #e6f4ea;
+            color: #007336;
+            border: 1.5px solid #b7dfca;
+            border-radius: 20px;
+            padding: 5px 14px;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .tag-pill:hover {
+            background: #007336;
+            color: #fff;
+            border-color: #007336;
+        }
+
+        /* ── Section 2 ── */
+
+        .section-block-2 {
+            background: linear-gradient(135deg, #eaf4fc 0%, #ffffff 100%);
+        }
+
+
+        .sub-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a365d;
+            border-left: 4px solid #007336;
+            padding-left: 12px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .content-text {
+            font-size: 0.875rem;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .list-group-custom {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-group-custom li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.875rem;
+            color: #2d3748;
+            padding: 9px 12px;
+            border-radius: 8px;
+            margin-bottom: 4px;
+            cursor: default;
+            transition: background 0.18s, transform 0.18s;
+        }
+
+        .list-group-custom li:hover {
+            background: #f0faf4;
+            transform: translateX(5px);
+        }
+
+        .closing-text {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 14px;
+            padding: 10px 14px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .col-divider {
+            border-left: 1px solid #e2ecf5;
+        }
+
+        @media (max-width: 767px) {
+            .section-block {
+                padding: 40px 20px;
+            }
+
+            .slide-title {
+                font-size: 1rem;
+            }
+
+            .col-divider {
+                border-left: none;
+                border-top: 1px solid #e2ecf5;
+                padding-top: 24px;
+                margin-top: 8px;
+            }
+        }
+
+
+        /* Industries We Serve  */
+        .card-custom {
+            background: #fff;
+            /* border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #e5e7eb; */
+        }
+
+        .section3-title {
+            font-size: 42px;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+
+
+        /* Card */
+        .industry-card {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 20px 10px;
+            transition: 0.3s ease;
+            border: 1px solid transparent;
+            height: 100%;
+        }
+
+        .industry-card:hover {
+            transform: translateY(-4px);
+            border-color: #007336;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+        }
+
+        .icon-box {
+            height: 80px;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto 10px;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f1f5f9;
+        }
+
+        .icon-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* keeps all images same size */
+            border-radius: 8px;
+        }
+
+        /* fallback if image fails */
+        .icon-box.fallback {
+            background: linear-gradient(135deg, #dbeafe, #dcfce7);
+        }
+
+        .industry-card p {
+            font-size: 15px;
+            color: #1a365d;
+            margin: 0;
+            font-weight: 700;
+        }
+
+        /* Tags */
+        .tag {
+            display: inline-block;
+            background: #e6f4ea;
+            color: #007336;
+            font-size: 12px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            margin: 5px 6px 0 0;
+        }
+
+        @media (max-width: 767px) {
+            .section3-title {
+                font-size: 18px;
+            }
+        }
+
+
+        /* faq */
+        .card-custom {
+            background: #fff;
+            /* border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #e5e7eb; */
+        }
+
+        .section4-title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #1a365d;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        /* Accordion styling */
+        .accordion-item {
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .faq-btn {
+            background: #f8fafc;
+            font-size: 15px;
+            color: #1a365d;
+            font-weight: 700;
+        }
+
+        .accordion-button:not(.collapsed) {
+            background: #eaf4fc;
+            color: #1a365d;
+            box-shadow: none;
+        }
+
+        .accordion-body {
+            font-size: 15px;
+            color: #007336;
+            background: #eaf4fc;
+        }
+
+        /* Custom + icon */
+        .accordion-button::after {
+            content: "+";
+            font-size: 18px;
+            background-image: none !important;
+            transform: none !important;
+        }
+
+        .accordion-button:not(.collapsed)::after {
+            content: "–";
+        }
+
+        /* Remove default arrow */
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+
+        /* our clients */
+        .section-10-clientele {
+            background: linear-gradient(135deg, #eaf4fc 0%, #ffffff 100%);
+            padding: 40px 0px;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .logo-slider {
+            margin-top: 40px;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .logo-track {
+            display: flex;
+            width: calc(250px * 16);
+            animation: scroll 25s linear infinite;
+        }
+
+        .logo {
+            width: 200px;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 20px;
+            filter: grayscale(0%);
+            transition: all 0.3s ease;
+        }
+
+        .logo img {
+            max-width: 85%;
+            max-height: 44px;
+            object-fit: contain;
+        }
+
+        /* HOVER EFFECT */
+        .logo:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+
+        /* ANIMATION */
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        /* ============================= */
+        /* RESPONSIVE */
+        /* ============================= */
+
+        @media (max-width: 768px) {
+            .logo {
+                width: 140px;
+                margin: 0 10px;
+            }
+
+            .logo img {
+                max-height: 50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .section-10-clientele {
+                padding: 60px 15px;
+            }
+
+            .logo {
+                width: 120px;
+            }
+
+            .logo img {
+                max-height: 40px;
+            }
+        }
+   /* ################Section 8, 9, 10 END############### */
    /* ################Section 7 END############### */
     </style>
 </head>
@@ -691,7 +1132,7 @@ section{padding: 30px 0;}
         </div>
     </div>
 </section>
-    <!-- ################# Section 1 END ###################### -->
+    <!-- ################# Section 1 END ###################### done-->
 
 
 
@@ -1069,7 +1510,7 @@ section{padding: 30px 0;}
         
         <div class="row justify-content-center mb-5">
             <div class="col-lg-9 text-center main-title">
-                <h2 class="display-6 fw-bold text-white mb-0 text-dark">
+                <h2 class="display-6 fw-bold mb-0 text-dark">
                     Why Choose Dharmani’s International as Your Pharmaceutical Packaging Company
                 </h2>
             </div>
@@ -1165,7 +1606,7 @@ section{padding: 30px 0;}
 
         <div class="row justify-content-center mt-5 pt-3">
             <div class="col-lg-8 text-center">
-                <p class="fs-5 fw-bold fst-italic text-white mb-4 lh-lg">
+                <p class="fs-5 fw-bold fst-italic text-dark mb-4 lh-lg">
                     We don’t just package products - we protect brand trust, compliance and long-term growth.
                 </p>
                 <a href="#" class="btn btn-primary custom-btn-green btn-lg rounded-pill px-5 py-2 shadow-sm">
@@ -1177,6 +1618,346 @@ section{padding: 30px 0;}
     </div>
 </section>
     <!-- ################# Section 7 END ###################### -->
+
+
+
+
+
+    <!-- ################# Section 8 start ###################### -->
+ <!-- section Industries We Serve  -->
+    <section>
+        <div class="container my-4 my-md-5">
+            <div class="card-custom">
+
+                <!-- Title -->
+                <h1 class="section3-title">
+                    Industries We Serve
+                </h1>
+
+                <!-- Cards -->
+                <div class="row g-3 text-center">
+
+                    <!-- Card 1 -->
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="industry-card">
+                            <a href="https://www.alfalaval.com/industries/biotech-pharmaceuticals/pharmaceutical-production/"
+                                target="_blank">
+                                <div class="icon-box">
+                                    <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" alt="Pharma"
+                                        onerror="this.style.display='none'; this.parentElement.classList.add('fallback');">
+                                </div>
+                            </a>
+                            <p>Pharmaceutical Manufacturers</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="industry-card">
+                            <a href="#">
+                                <div class="icon-box">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFlRlAUTS3RZnkmzZ28jsQsMr9E0FZilFWCw&s"
+                                        alt="Nutraceutical"
+                                        onerror="this.style.display='none'; this.parentElement.classList.add('fallback');">
+                                </div>
+                            </a>
+                            <p>Nutraceutical & dietary supplement brands</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="industry-card">
+                            <a href="#">
+                                <div class="icon-box">
+                                    <img src="data:image/jpeg;base64,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"
+                                        alt="Herbal"
+                                        onerror="this.style.display='none'; this.parentElement.classList.add('fallback');">
+                                </div>
+                            </a>
+                            <p>Herbal & wellness companies</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="industry-card">
+                            <a href="#">
+                                <div class="icon-box">
+                                    <img src="https://kaiherbals.com/wp-content/uploads/2024/07/Private-label-Herbal-products-and-services-1.jpg"
+                                        alt="D2C"
+                                        onerror="this.style.display='none'; this.parentElement.classList.add('fallback');">
+                                </div>
+                            </a>
+                            <p>D2C & private label healthcare brands</p>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="col-6 col-md-4 col-lg">
+                        <div class="industry-card">
+                            <a href="#">
+                                <div class="icon-box">
+                                    <img src="https://auroindiaexports.com/wp-content/uploads/2024/03/pharma-image.jpg"
+                                        alt="Export Pharma"
+                                        onerror="this.style.display='none'; this.parentElement.classList.add('fallback');">
+                                </div>
+                            </a>
+                            <p>Export-focused pharma businesses</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ################# Section 8 END ###################### -->
+
+
+
+    <!-- ################# Section 9 start ###################### -->
+      <!-- FAQ Section -->
+    <section>
+        <div class="container my-4 my-md-5">
+            <div class="card-custom">
+
+                <!-- Title -->
+                <h1 class="section4-title">
+                    Frequently Asked Questions
+                </h1>
+
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10">
+
+                        <div class="accordion" id="faqAccordion">
+
+                            <!-- ITEM 1 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq1">
+                                        Do startups get bulk pharmaceutical packaging from you?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        We back new ventures and expanding companies with adaptable bulk packaging that
+                                        fits strict rules and sales targets.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ITEM 2 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq2">
+                                        Does your packaging meet GMP rules?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Every step sticks to GMP protocols and top pharma quality benchmarks for
+                                        reliable results.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ITEM 3 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq3">
+                                        Can you bundle packaging with production services?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Our setup lets us run manufacturing and pharma packaging together in one smooth
+                                        operation.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ITEM 4 -->
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq4">
+                                        How do you keep products safe in packaging?
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Choices cover bottles, blister packs, sachets and containers suited for pills,
+                                        gels, powders, or fluids based on your needs.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq5">
+                                        Do we Need one-off designs for packaging?
+                                    </button>
+                                </h2>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        We at Dharmani’s International as a leading pharmaceutical packaging company
+                                        crew shapes unique looks - tamper-proof, green-focused, or label-perfect - to
+                                        boost visibility and follow pharma norms.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq6">
+                                        What's the smallest batch size for bulk jobs?
+                                    </button>
+                                </h2>
+                                <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        The startups usually opt for almost 5K units or less, with easy ramps as orders
+                                        climb
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq7">
+                                        What's the smallest batch size for bulk jobs?
+                                    </button>
+                                </h2>
+                                <div id="faq7" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        The startups usually opt for almost 5K units or less, with easy ramps as orders
+                                        climb
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq8">
+                                        What is the timeline for packaging post-production?
+                                    </button>
+                                </h2>
+                                <div id="faq8" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Most wrap in 2-4 weeks after formula sign-off, with fast-track paths for urgent
+                                        needs.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq9">
+                                        Ready for global export packaging?
+                                    </button>
+                                </h2>
+                                <div id="faq9" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Dharmani’s International as a pharmaceutical packaging company matches worldwide
+                                        specs like USFDA, EU rules, and FSSAI to ship safely across 15+ markets.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed faq-btn" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#faq10">
+                                        What tests run on packaging batches?
+                                    </button>
+                                </h2>
+                                <div id="faq10" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body">
+                                        Visual scans, seal strength checks, shelf-life trials and complete paperwork
+                                        ensure full readiness for checks.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- ################# Section 9 END ###################### -->
+
+
+
+    <!-- ################# Section 10 start ###################### -->
+      <!-- SECTION 10: OUR CLIENTELE -->
+    <section class="section-10-clientele">
+        <div class="container">
+            <h2 class="section4-title">Our Clientele</h2>
+
+            <div class="logo-slider">
+                <div class="logo-track">
+                    <!-- LOGOS (repeat for smooth infinite scroll) -->
+                    <div class="logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" />
+                    </div>
+                    <div class="logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" />
+                    </div>
+                    <div class="logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+                    </div>
+                    <div class="logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" />
+                    </div>
+                    <div class="logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" />
+                    </div>
+                    <div class="logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" />
+                    </div>
+
+
+                    <!-- DUPLICATE FOR INFINITE EFFECT -->
+                    <div class="logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" />
+                    </div>
+                    <div class="logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" />
+                    </div>
+                    <div class="logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" />
+                    </div>
+                    <div class="logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/0/08/Netflix_2015_logo.svg" />
+                    </div>
+                    <div class="logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" />
+                    </div>
+                    <div class="logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" />
+                    </div>
+                    <div class="logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/96/Samsung_Logo.svg" />
+                    </div>
+                    <div class="logo">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6e/Tesla_logo.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- ################# Section 10 END ###################### -->
 
 
 
