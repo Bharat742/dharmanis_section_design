@@ -60,11 +60,7 @@ section{padding: 30px 0;}
 .hero-section .btn-primary {background-color: #007336;border-color: #007336;font-weight: 500;}
 .hero-section .btn-primary:hover {background-color: #005a29;border-color: #005a29;}
 .hero-section .btn-outline-secondary {color: #4a5568;border-color: #cbd5e1;font-weight: 500;}   
-.hero-section .btn-outline-secondary:hover {
-    background-color: #f8fafc;
-    color: #0f172a;
-    border-color: #cbd5e1;
-}
+.hero-section .btn-outline-secondary:hover {background-color: #f8fafc; color: #0f172a; border-color: #cbd5e1;}
 @media (max-width: 767.98px) {
     .hero-headline {font-size: 24px;}
     .hero-section .btn-lg {width: 100%; text-align: center;}
@@ -99,7 +95,294 @@ section{padding: 30px 0;}
 
 
 
-   /* ################Section 1 style############### */
+   /* ################Section 3 and 4 start############### */
+ body {
+            font-family: 'Inter', sans-serif;
+            background: #ffffff;
+            min-height: 100vh;  
+            margin: 0;
+        }
+
+        /* ── Shared Section ── */
+        .section-block {
+            padding: 60px 40px;
+            border-bottom: 1px solid #e2ecf5;
+        }
+
+        .section-block:last-child {
+            border-bottom: none;
+        }
+
+        /* Slide number + title */
+        .slide-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .slide-num {
+            width: 32px;
+            height: 32px;
+            background: #1a365d;
+            color: #fff;
+            border-radius: 7px;
+            font-size: 0.82rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .slide-title {
+            font-size: 40px;
+            font-weight: 700;
+            color: #1a365d;
+            margin-left: 265px;
+        }
+
+        /* ── Section 1 ── */
+        .intro-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: #475569;
+            line-height: 1.72;
+            margin-bottom: 20px;
+        }
+    
+
+        .bullet-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .bullet-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.875rem;
+            color: #2d3748;
+            padding: 10px 12px;
+            border-radius: 8px;
+            margin-bottom: 4px;
+            cursor: default;
+            transition: background 0.18s, transform 0.18s;
+        }
+
+        .bullet-list li:hover {
+            background: #f0faf4;
+            transform: translateX(5px);
+        }
+
+        .check-icon {
+            width: 20px;
+            height: 20px;
+            background: #e6f4ec;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+
+        .check-icon svg {
+            width: 11px;
+            height: 11px;
+        }
+
+        .img-box {
+            border-radius: 12px;
+            overflow: hidden;
+            height: 100%;
+            min-height: 240px;
+            /* background: #ffffff; */
+        }
+
+        .img-box img {
+            width: 71%;
+            margin-left: 91px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+            border-radius: 18px;
+        }
+
+        .img-box:hover img {
+            transform: scale(1.03);
+        }
+
+        .closing-bar {
+            border-left: 3px solid #007336;
+            background: linear-gradient(135deg, #f0f9ff, #f0faf4);
+            border-radius: 0 8px 8px 0;
+            padding: 14px 18px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            color: #1a365d;
+            line-height: 1.6;
+        }
+
+        .tag-pill {
+            font-size: 0.72rem;
+            font-weight: 500;
+            background: #e6f4ea;
+            color: #007336;
+            border: 1.5px solid #b7dfca;
+            border-radius: 20px;
+            padding: 5px 14px;
+            cursor: pointer;
+            transition: background 0.15s, color 0.15s;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .tag-pill:hover {
+            background: #007336;
+            color: #fff;
+            border-color: #007336;
+        }
+
+        /* ── Section 2 ── */
+
+        .section-block-2 {
+            background: linear-gradient(135deg, #eaf4fc 0%, #ffffff 100%);
+        }
+
+
+        .sub-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1a365d;
+            border-left: 4px solid #007336;
+            padding-left: 12px;
+            margin-bottom: 20px;
+            line-height: 1.4;
+        }
+
+        .content-text {
+            font-size: 0.875rem;
+            color: #475569;
+            line-height: 1.7;
+            margin-bottom: 16px;
+        }
+
+        .list-group-custom {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-group-custom li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.875rem;
+            color: #2d3748;
+            padding: 9px 12px;
+            border-radius: 8px;
+            margin-bottom: 4px;
+            cursor: default;
+            transition: background 0.18s, transform 0.18s;
+        }
+
+        .list-group-custom li:hover {
+            background: #f0faf4;
+            transform: translateX(5px);
+        }
+
+        .closing-text {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 14px;
+            padding: 10px 14px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .col-divider {
+            border-left: 1px solid #e2ecf5;
+        }
+
+        @media (max-width: 767px) {
+            .section-block {
+                padding: 40px 20px;
+            }
+
+            .slide-title {
+                font-size: 1rem;
+            }
+
+            .col-divider {
+                border-left: none;
+                border-top: 1px solid #e2ecf5;
+                padding-top: 24px;
+                margin-top: 8px;
+            }
+        }
+   /* ################Section 3 END############### */
+
+
+
+   /* ################Section 7 style############### */
+/* USP Section Base */
+.usp-section {
+    background-color: #e5f1eb;
+    border-radius: 8px;  
+    color: #000;
+}
+
+/* Control max width of the grid for better readability on ultrawide screens */
+.usp-grid {
+    max-width: 1000px; 
+}
+
+/* USP Item Boxes */
+.usp-item {
+    background-color: rgba(255, 255, 255, 0.04); /* Subtle transparent white background */
+    border: 1px solid rgba(255, 255, 255, 0.08); /* Faint border */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    height: 100%; /* Ensures equal heights if text wraps */
+}
+
+.usp-item:hover {
+    background-color: rgba(255, 255, 255, 0.08);
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+/* Icon Sizing & Color */
+.usp-icon svg {
+    width: 28px;
+    height: 28px;
+    /* color: #65a147;   */
+    color: #000;  
+}
+
+/* Typography for the list */
+.usp-text {
+    font-size: 1.05rem;
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 0.3px;
+}
+
+/* Custom Green CTA Button */
+.custom-btn-green {
+    background-color: #65a147 !important; /* Overriding Bootstrap primary blue */
+    border-color: #65a147 !important;
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+}
+
+.custom-btn-green:hover {
+    background-color: #558a3a !important; /* Darker green on hover */
+    border-color: #558a3a !important;
+    transform: scale(1.02);
+}
+   /* ################Section 7 END############### */
     </style>
 </head>
 <body>
@@ -310,6 +593,310 @@ section{padding: 30px 0;}
     </div>
 </section>
     <!-- ################# Section 2 END ###################### -->
+
+
+
+    <!-- ################# Section 3 and 4 start ###################### -->
+ <!-- ══ SECTION 1 ══ -->
+    <section class="section-block">
+        <div class="slide-header">
+            <!-- <span class="slide-num">3</span> -->
+            <h2 class="slide-title">Why Pharmaceutical Packaging Matters</h2>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+
+            <!-- Left -->
+            <div class="col-12 col-md-6 d-flex flex-column gap-3">
+                <p class="intro-text ">
+                    In pharmaceuticals and wellness, packaging directly impacts product safety, shelf life, and
+                    regulatory approval. A specialized pharmaceutical packaging company helps you:
+                </p>
+
+                <ul class="bullet-list">
+                    <li>
+                        <span class="check-icon"><svg viewBox="0 0 12 12" fill="none">
+                                <path d="M2 6.5L4.5 9L10 3" stroke="#007336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+                        Maintain dosage integrity and product stability
+                    </li>
+                    <li>
+                        <span class="check-icon"><svg viewBox="0 0 12 12" fill="none">
+                                <path d="M2 6.5L4.5 9L10 3" stroke="#007336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+                        Meet GMP, labeling, and compliance standards
+                    </li>
+                    <li>
+                        <span class="check-icon"><svg viewBox="0 0 12 12" fill="none">
+                                <path d="M2 6.5L4.5 9L10 3" stroke="#007336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+                        Reduce contamination and handling risks
+                    </li>
+                    <li>
+                        <span class="check-icon"><svg viewBox="0 0 12 12" fill="none">
+                                <path d="M2 6.5L4.5 9L10 3" stroke="#007336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+                        Improve logistics efficiency and batch traceability
+                    </li>
+                    <li>
+                        <span class="check-icon"><svg viewBox="0 0 12 12" fill="none">
+                                <path d="M2 6.5L4.5 9L10 3" stroke="#007336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+                        Build trust with regulators, distributors, and consumers
+                    </li>
+                </ul>
+
+                <div class="closing-bar mt-auto">
+                    Dharmani's International combines process discipline with packaging precision to ensure products
+                    perform safely across their lifecycle.
+                </div>
+
+                <div class="d-flex flex-wrap gap-2">
+                    <a class="tag-pill">Contract Packaging Pharma</a>
+                    <a class="tag-pill">Aphena Pharma</a>
+                    <a class="tag-pill">Palladio Group</a>
+                </div>
+            </div>
+
+            <!-- Right -->
+            <div class="col-12 col-md-6">
+                <div class="img-box">
+                    <img src="/public/d2.jpg" alt="Pharma Packaging"
+                        onerror="this.parentElement.style.background='linear-gradient(135deg,#dbeafe,#dcfce7)'; this.style.display='none';">
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ══ SECTION 2 ══ -->
+    <section class="section-block section-block-2">
+        <div class="slide-header">
+            <!-- <span class="slide-num">4</span> -->
+            <h2 class="slide-title">Pharmaceutical Packaging Capabilities</h2>
+        </div>
+
+        <div class="row g-4 new-section ">
+
+            <!-- Left -->
+            <div class="col-12 col-md-6">
+                <h3 class="sub-title">Bulk Pharmaceutical Packaging Solutions</h3>
+                <p class="content-text">
+                    We offer high-capacity bulk pharmaceutical packaging services designed for manufacturers, exporters,
+                    and private label brands.
+                </p>
+                <ul class="list-group-custom">
+                    <li>
+                        <span class="check-icon"><svg viewBox="0 0 12 12" fill="none">
+                                <path d="M2 6.5L4.5 9L10 3" stroke="#007336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+                        Tablet &amp; capsule bulk packing
+                    </li>
+                    <li>
+                        <span class="check-icon"><svg viewBox="0 0 12 12" fill="none">
+                                <path d="M2 6.5L4.5 9L10 3" stroke="#007336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+                        Powder &amp; granule packaging
+                    </li>
+                    <li>
+                        <span class="check-icon"><svg viewBox="0 0 12 12" fill="none">
+                                <path d="M2 6.5L4.5 9L10 3" stroke="#007336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+                        Liquid, syrup &amp; suspension filling
+                    </li>
+                    <li>
+                        <span class="check-icon"><svg viewBox="0 0 12 12" fill="none">
+                                <path d="M2 6.5L4.5 9L10 3" stroke="#007336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+                        Oils &amp; semi-solid packaging
+                    </li>
+                    <li>
+                        <span class="check-icon"><svg viewBox="0 0 12 12" fill="none">
+                                <path d="M2 6.5L4.5 9L10 3" stroke="#007336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+                        Herbal &amp; nutraceutical bulk formats
+                    </li>
+                </ul>
+                <p class="closing-text">Each batch follows validated SOPs, hygiene controls, and documentation
+                    protocols. </p>
+
+                <div class="d-flex flex-wrap gap-2 mt-3">
+                    <a class="tag-pill">Aphena Packaging</a>
+                    <a class="tag-pill">Pharma Packaging Solutions</a>
+                </div>
+            </div>
+
+            <!-- Right -->
+            <div class="col-12 col-md-6 col-divider ps-md-5">
+                <h3 class="sub-title">Nutraceutical &amp; Herbal Packaging Services</h3>
+                <p class="content-text">
+                    As an experienced pharmaceutical packaging company, we support the growing nutraceutical and herbal
+                    segment with compliant, consumer-safe packaging solutions.
+                </p>
+                <ul class="list-group-custom">
+                    <li>
+                        <span class="check-icon"><svg viewBox="0 0 12 12" fill="none">
+                                <path d="M2 6.5L4.5 9L10 3" stroke="#007336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+                        Herbal capsules &amp; tablets.
+                    </li>
+                    <li>
+                        <span class="check-icon"><svg viewBox="0 0 12 12" fill="none">
+                                <path d="M2 6.5L4.5 9L10 3" stroke="#007336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+                        Protein powders &amp; supplements
+                    </li>
+                    <li>
+                        <span class="check-icon"><svg viewBox="0 0 12 12" fill="none">
+                                <path d="M2 6.5L4.5 9L10 3" stroke="#007336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+                        Immunity &amp; wellness formulation
+                    </li>
+                    <li>
+                        <span class="check-icon"><svg viewBox="0 0 12 12" fill="none">
+                                <path d="M2 6.5L4.5 9L10 3" stroke="#007336" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg></span>
+                        Pediatric &amp; geriatric nutrition products
+
+                    </li>
+                </ul>
+                <p class="closing-text">Packaging is optimized for moisture control, dosage accuracy, and extended shelf
+                    life.</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- ################# Section 3 END ###################### -->
+
+
+    <!-- ################# Section 7 start ###################### -->
+<section class="usp-section py-5">
+    <div class="container">
+        
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-9 text-center main-title">
+                <h2 class="display-6 fw-bold text-white mb-0 text-dark">
+                    Why Choose Dharmani’s International as Your Pharmaceutical Packaging Company
+                </h2>
+            </div>
+        </div>
+
+        <div class="row g-4 justify-content-center usp-grid mx-auto">
+            
+            <div class="col-12 col-md-6">
+                <div class="usp-item d-flex align-items-center p-3 p-lg-4 rounded-3">
+                    <div class="usp-icon flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                          <path d="M5.338 1.59a59.768 59.768 0 0 0-2.836.856.894.894 0 0 0-.615.842V8.29c0 5.433 3.42 9.06 8 11.71 4.58-2.65 8-6.277 8-11.71V3.288a.894.894 0 0 0-.615-.842 59.768 59.768 0 0 0-2.836-.856C12.193 1.13 10.428.5 8 .5s-4.193.63-6.662 1.09zM8 1.5c2.316-.43 4.02-.97 6.435-1.442.278-.054.565.132.565.419v5.813c0 4.93-3.153 8.163-7 10.51-3.847-2.347-7-5.58-7-10.51V1.477c0-.287.287-.473.565-.419C3.98 1.53 5.684 2.07 8 2.5z"/>
+                          <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                    </div>
+                    <div class="usp-text ms-3">
+                        GMP-certified pharmaceutical packaging facilities
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="usp-item d-flex align-items-center p-3 p-lg-4 rounded-3">
+                    <div class="usp-icon flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                          <path d="M5.338 1.59a59.768 59.768 0 0 0-2.836.856.894.894 0 0 0-.615.842V8.29c0 5.433 3.42 9.06 8 11.71 4.58-2.65 8-6.277 8-11.71V3.288a.894.894 0 0 0-.615-.842 59.768 59.768 0 0 0-2.836-.856C12.193 1.13 10.428.5 8 .5s-4.193.63-6.662 1.09zM8 1.5c2.316-.43 4.02-.97 6.435-1.442.278-.054.565.132.565.419v5.813c0 4.93-3.153 8.163-7 10.51-3.847-2.347-7-5.58-7-10.51V1.477c0-.287.287-.473.565-.419C3.98 1.53 5.684 2.07 8 2.5z"/>
+                          <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                    </div>
+                    <div class="usp-text ms-3 ">
+                        Expertise across pharma, nutraceutical & herbal segments
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="usp-item d-flex align-items-center p-3 p-lg-4 rounded-3">
+                    <div class="usp-icon flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                          <path d="M5.338 1.59a59.768 59.768 0 0 0-2.836.856.894.894 0 0 0-.615.842V8.29c0 5.433 3.42 9.06 8 11.71 4.58-2.65 8-6.277 8-11.71V3.288a.894.894 0 0 0-.615-.842 59.768 59.768 0 0 0-2.836-.856C12.193 1.13 10.428.5 8 .5s-4.193.63-6.662 1.09zM8 1.5c2.316-.43 4.02-.97 6.435-1.442.278-.054.565.132.565.419v5.813c0 4.93-3.153 8.163-7 10.51-3.847-2.347-7-5.58-7-10.51V1.477c0-.287.287-.473.565-.419C3.98 1.53 5.684 2.07 8 2.5z"/>
+                          <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                    </div>
+                    <div class="usp-text ms-3 ">
+                        Regulatory-aligned packaging systems
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="usp-item d-flex align-items-center p-3 p-lg-4 rounded-3">
+                    <div class="usp-icon flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                          <path d="M5.338 1.59a59.768 59.768 0 0 0-2.836.856.894.894 0 0 0-.615.842V8.29c0 5.433 3.42 9.06 8 11.71 4.58-2.65 8-6.277 8-11.71V3.288a.894.894 0 0 0-.615-.842 59.768 59.768 0 0 0-2.836-.856C12.193 1.13 10.428.5 8 .5s-4.193.63-6.662 1.09zM8 1.5c2.316-.43 4.02-.97 6.435-1.442.278-.054.565.132.565.419v5.813c0 4.93-3.153 8.163-7 10.51-3.847-2.347-7-5.58-7-10.51V1.477c0-.287.287-.473.565-.419C3.98 1.53 5.684 2.07 8 2.5z"/>
+                          <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                    </div>
+                    <div class="usp-text ms-3 ">
+                        Scalable bulk and contract packaging solutions
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="usp-item d-flex align-items-center p-3 p-lg-4 rounded-3">
+                    <div class="usp-icon flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                          <path d="M5.338 1.59a59.768 59.768 0 0 0-2.836.856.894.894 0 0 0-.615.842V8.29c0 5.433 3.42 9.06 8 11.71 4.58-2.65 8-6.277 8-11.71V3.288a.894.894 0 0 0-.615-.842 59.768 59.768 0 0 0-2.836-.856C12.193 1.13 10.428.5 8 .5s-4.193.63-6.662 1.09zM8 1.5c2.316-.43 4.02-.97 6.435-1.442.278-.054.565.132.565.419v5.813c0 4.93-3.153 8.163-7 10.51-3.847-2.347-7-5.58-7-10.51V1.477c0-.287.287-.473.565-.419C3.98 1.53 5.684 2.07 8 2.5z"/>
+                          <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                    </div>
+                    <div class="usp-text ms-3">
+                        Strong confidentiality & batch integrity controls
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-6">
+                <div class="usp-item d-flex align-items-center p-3 p-lg-4 rounded-3">
+                    <div class="usp-icon flex-shrink-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" class="bi bi-shield-check" viewBox="0 0 16 16">
+                          <path d="M5.338 1.59a59.768 59.768 0 0 0-2.836.856.894.894 0 0 0-.615.842V8.29c0 5.433 3.42 9.06 8 11.71 4.58-2.65 8-6.277 8-11.71V3.288a.894.894 0 0 0-.615-.842 59.768 59.768 0 0 0-2.836-.856C12.193 1.13 10.428.5 8 .5s-4.193.63-6.662 1.09zM8 1.5c2.316-.43 4.02-.97 6.435-1.442.278-.054.565.132.565.419v5.813c0 4.93-3.153 8.163-7 10.51-3.847-2.347-7-5.58-7-10.51V1.477c0-.287.287-.473.565-.419C3.98 1.53 5.684 2.07 8 2.5z"/>
+                          <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                        </svg>
+                    </div>
+                    <div class="usp-text ms-3 ">
+                        End-to-end support from manufacturing to packaging
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row justify-content-center mt-5 pt-3">
+            <div class="col-lg-8 text-center">
+                <p class="fs-5 fw-bold fst-italic text-white mb-4 lh-lg">
+                    We don’t just package products - we protect brand trust, compliance and long-term growth.
+                </p>
+                <a href="#" class="btn btn-primary custom-btn-green btn-lg rounded-pill px-5 py-2 shadow-sm">
+                    Get a Quote
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+    <!-- ################# Section 7 END ###################### -->
 
 
 
