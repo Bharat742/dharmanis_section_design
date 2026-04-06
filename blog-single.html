@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog Single Page</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fcfcfc;
+            color: #333;
+        }
+
+        /* Top Banner & Floating Search Bar (Reused from previous) */
+        .top-banner {
+            height: 300px;
+            background: url('https://dharmanis.com/wp-content/uploads/2024/04/infrastructure21.png') no-repeat center/cover;
+            position: relative;
+        }
+
+        .search-bar-wrapper {
+            margin-top: -35px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .search-bar-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 50px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            padding: 10px 20px;
+        }
+
+        .search-bar-container select, 
+        .search-bar-container input {
+            border: none;
+            box-shadow: none !important;
+            background: transparent;
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .search-bar-container .input-group-text {
+            background: transparent;
+            border: none;
+            color: #aaa;
+        }
+
+        .search-bar-container .divider {
+            border-right: 1px solid #e0e0e0;
+            height: 30px;
+            margin: auto 15px;
+        }
+
+        .btn-search {
+            background-color: #4a7ab5; 
+            color: white;
+            border-radius: 30px;
+            padding: 8px 25px;
+            font-weight: 500;
+            transition: 0.2s ease;
+        }
+        
+        .btn-search:hover {
+            background-color: #386094;
+            color: white;
+        }
+
+        /* --- Blog Single Page Specific Styles --- */
+        
+        /* Main Content Column */
+        .blog-content-card {
+            background: #fff;
+            border: 1px solid #eaeaea;
+            border-radius: 8px;
+            padding: 2.5rem;
+        }
+
+        .blog-title {
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+
+        .blog-meta-info {
+            color: #2b70c9; /* Distinct blue from the image */
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 20px;
+        }
+
+        .blog-meta-info span {
+            display: flex;
+            align-items: center;
+        }
+        
+        .blog-meta-info .separator {
+            color: #ccc;
+        }
+
+        .blog-body p {
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .blog-body h3 {
+            font-weight: 500;
+            color: #222;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .blog-body ul {
+            padding-left: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .blog-body ul li {
+            color: #444;
+            line-height: 1.8;
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+
+        .blog-body ul li::marker {
+            color: #2b70c9; /* Blue bullets */
+        }
+
+        /* Sidebar Column */
+        .sidebar-toc {
+            padding-left: 1rem;
+            border-left: 2px solid #f0f0f0;
+        }
+
+        .sidebar-toc ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar-toc ul li {
+            margin-bottom: 1.2rem;
+        }
+
+        .sidebar-toc ul li a {
+            text-decoration: none;
+            color: #444;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+
+        .sidebar-toc ul li a:hover,
+        .sidebar-toc ul li a.active {
+            color: #2b70c9;
+            font-weight: 500;
+        }
+
+        /* Share Widget */
+        .share-widget {
+            background-color: #5cb874; /* The specific green */
+            border-radius: 8px;
+            padding: 12px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            margin-top: 2rem;
+        }
+
+        .share-widget span {
+            font-weight: 500;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .social-icons a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1rem;
+            margin-left: 15px;
+            transition: opacity 0.2s;
+        }
+
+        .social-icons a:hover {
+            opacity: 0.8;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="top-banner"></div>
+
+    <div class="container search-bar-wrapper">
+        <div class="search-bar-container row align-items-center mx-0">
+            <div class="col-md-3 d-flex align-items-center">
+                <span class="input-group-text"><i class="fa-regular fa-comment-dots"></i></span>
+                <select class="form-select">
+                    <option selected disabled>Speciality</option>
+                    <option value="1">Cardiology</option>
+                    <option value="2">Neurology</option>
+                </select>
+                <div class="divider d-none d-md-block"></div>
+            </div>
+
+            <div class="col-md-4 d-flex align-items-center mt-3 mt-md-0">
+                <span class="input-group-text"><i class="fa-regular fa-clipboard"></i></span>
+                <select class="form-select">
+                    <option selected disabled>Select Procedure</option>
+                    <option value="1">Surgery A</option>
+                    <option value="2">Surgery B</option>
+                </select>
+                <div class="divider d-none d-md-block"></div>
+            </div>
+
+            <div class="col-md-3 d-flex align-items-center mt-3 mt-md-0">
+                <span class="input-group-text"><i class="fa-solid fa-location-dot"></i></span>
+                <select class="form-select">
+                    <option selected disabled>Country</option>
+                    <option value="1">India</option>
+                    <option value="2">Turkey</option>
+                </select>
+            </div>
+
+            <div class="col-md-2 text-md-end mt-3 mt-md-0 text-center">
+                <button class="btn btn-search w-100"><i class="fa-solid fa-magnifying-glass me-2"></i>Search</button>
+            </div>
+        </div>
+    </div>
+
+    <section class="py-5 mt-2">
+        <div class="container">
+            <div class="row g-5">
+                
+                <div class="col-lg-8">
+                    <div class="blog-content-card">
+                        
+                        <h1 class="blog-title">Beyond The Waitlist: How Medical Tourism Is Addressing The Global Healthcare Crisis</h1>
+                        
+                        <div class="blog-meta-info">
+                            <span>May 9, 2025, admin</span>
+                            <span class="separator">|</span>
+                            <span>675 Views</span>
+                        </div>
+
+                        <div class="blog-body">
+                            <p>In today's healthcare landscape, hospitals are increasingly prioritizing their International Patient Departments to deliver world-class medical services. But achieving this goal isn't just about attracting international patients, it's about addressing critical factors like capacity constraints, managing hospital waitlists, and ensuring a highly skilled workforce is in place. In the face of these systemic failures, medical tourism has emerged as a powerful solution, offering patients access to timely, affordable, and high-quality care across borders. What was once a niche market for elective procedures like cosmetic surgery has now become a global phenomenon, reshaping how we think about healthcare delivery. From life-saving surgeries to advanced treatments, medical tourism is not just a trend, it's a lifeline for patients worldwide.</p>
+
+                            <h3>Why Is Medical Tourism Needed?</h3>
+                            
+                            <p>Here are some statistics detailing timeframes to get medical care:</p>
+                            
+                            <ul>
+                                <li>In Canada, the average wait time for medically necessary treatments is 27.4 weeks (Fraser Institute's 2023 report).</li>
+                                <li>In the UK, the NHS routine hospital treatments hit 7.7 million cases in 2023, with some patients on waitlists for over a year.</li>
+                                <li>In the U.S., an estimated 41% of adults have medical debt, with many forgoing necessary treatments due to cost.</li>
+                            </ul>
+
+                            <p>Along with developed countries, low and middle-income countries are also facing challenges, where limited infrastructure and a shortage of medical professionals often mean that patients cannot access even basic care. The Impact of Medical Tourism With the intervention of medical tourism filling these gaps, the healthcare sector is now improving. For example: Countries like India, Thailand, and Mexico are leading the charge, offering treatments at a...</p>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="sticky-top" style="top: 2rem;">
+                        
+                        <div class="sidebar-toc">
+                            <ul>
+                                <li><a href="#" class="active">Overview</a></li>
+                                <li><a href="#">Why is Medical Tourism Needed?</a></li>
+                                <li><a href="#">How Medical Tourism is Transforming Healthcare</a></li>
+                                <li><a href="#">Takeaway:</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="share-widget">
+                            <span><i class="fa-solid fa-share-nodes"></i> Share:</span>
+                            <div class="social-icons">
+                                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
